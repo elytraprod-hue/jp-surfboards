@@ -395,14 +395,15 @@ export const Catalog: React.FC = () => {
 
                 {/* CTA Action */}
                 <div style={{ alignSelf: 'flex-start' }}>
-                  <a
-                    href={`https://wa.me/5548991663544?text=${encodeURIComponent(board.whatsappMessage)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => {
+                      window.dispatchEvent(new CustomEvent('open-configurator', { detail: { modelId: board.id } }));
+                    }}
                     className="btn-premium"
+                    style={{ cursor: 'pointer' }}
                   >
                     Encomendar esse shape ➔
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

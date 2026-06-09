@@ -47,10 +47,8 @@ export const Footer: React.FC = () => {
           >
             Pranchas de surf artesanais de alta performance shapadas à mão em Florianópolis, SC. Foco total em hidrodinâmica e controle.
           </p>
-          <a
-            href="https://wa.me/5548991663544"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent('open-configurator'))}
             className="text-mono"
             style={{
               display: 'inline-flex',
@@ -63,12 +61,12 @@ export const Footer: React.FC = () => {
               border: '1px solid var(--accent)',
               color: 'var(--accent)',
               background: 'transparent',
-              textDecoration: 'none',
+              cursor: 'pointer',
               transition: 'all 0.15s ease',
             }}
           >
             +55 (48) 99166-3544
-          </a>
+          </button>
         </div>
 
         {/* Catalog */}
@@ -173,7 +171,14 @@ export const Footer: React.FC = () => {
           </h4>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
             <li>
-              <a href="https://wa.me/5548991663544" target="_blank" rel="noopener noreferrer" style={footerLinkStyle}>
+              <a
+                href="#configurator"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new CustomEvent('open-configurator'));
+                }}
+                style={footerLinkStyle}
+              >
                 WhatsApp
               </a>
             </li>

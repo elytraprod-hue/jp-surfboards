@@ -202,14 +202,15 @@ export const Process: React.FC = () => {
         >
           Falar diretamente com o shaper no WhatsApp é o canal ideal para alinhar suas medidas, volume ideal e tirar dúvidas técnicas sobre a laminação.
         </p>
-        <a
-          href="https://wa.me/5548991663544?text=Olá,%20quero%20encomendar%20uma%20prancha%20JP%20Surf%20Boards."
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={() => {
+            window.dispatchEvent(new CustomEvent('open-configurator'));
+          }}
           className="btn-premium"
+          style={{ cursor: 'pointer' }}
         >
           Iniciar Atendimento ➔
-        </a>
+        </button>
       </div>
 
       <style>{`

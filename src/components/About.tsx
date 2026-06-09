@@ -160,7 +160,6 @@ export const About: React.FC = () => {
               }}
               loading="lazy"
             />
-            <div className="about-photo-grid-lines" />
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@ export const Gallery: React.FC = () => {
       )
     },
     {
-      title: "A Fábrica",
+      title: "O Shaper JP",
       subtitle: "Florianópolis, SC",
       imgSrc: "/gallery/factory-about.webp",
     },
@@ -56,6 +56,11 @@ export const Gallery: React.FC = () => {
       )
     },
     {
+      title: "Linhas do Outline",
+      subtitle: "Shaping Lab / 01",
+      imgSrc: "/gallery/shaping-outline.webp",
+    },
+    {
       title: "Skeletton Bird Line",
       subtitle: "Longboard / 04",
       isBlueprint: true,
@@ -66,6 +71,11 @@ export const Gallery: React.FC = () => {
           <line x1="50" y1="4" x2="50" y2="240" stroke="rgba(245,245,245,0.15)" strokeDasharray="3 5" />
         </svg>
       )
+    },
+    {
+      title: "Laminação em Resina",
+      subtitle: "Glassing Room / 02",
+      imgSrc: "/gallery/glassing-work.webp",
     },
     {
       title: "Black Buffalo Detail",
@@ -80,6 +90,11 @@ export const Gallery: React.FC = () => {
       )
     },
     {
+      title: "Lixamento de Precisão",
+      subtitle: "Sanding Lab / 03",
+      imgSrc: "/gallery/finish-sanding.webp",
+    },
+    {
       title: "Phantom Shark Curve",
       subtitle: "Heavy Water / 06",
       isBlueprint: true,
@@ -90,6 +105,11 @@ export const Gallery: React.FC = () => {
           <line x1="50" y1="5" x2="50" y2="240" stroke="rgba(245,245,245,0.15)" strokeDasharray="3 5" />
         </svg>
       )
+    },
+    {
+      title: "Pronta para o Surf",
+      subtitle: "Fábrica / 04",
+      imgSrc: "/gallery/ready-to-surf.webp",
     },
     {
       title: "Bus Driver Outline",
@@ -176,7 +196,7 @@ export const Gallery: React.FC = () => {
                 
                 {/* Board thumbnail in absolute overlay for interactiveness */}
                 <img
-                  src={`/boards/thumbs/${item.slug}.webp`}
+                  src={item.slug ? `/boards/webp/${item.slug}-thumb.webp` : ''}
                   alt={item.title}
                   style={{
                     position: 'absolute',
@@ -215,7 +235,7 @@ export const Gallery: React.FC = () => {
                 </span>
               </div>
             ) : (
-              // Image card (A fábrica)
+              // Image card (Actual photographs)
               <div
                 style={{
                   width: '100%',
@@ -236,7 +256,7 @@ export const Gallery: React.FC = () => {
                     height: '100%',
                     objectFit: 'cover',
                     display: 'block',
-                    opacity: 0.65,
+                    opacity: 0.75,
                     transition: 'transform 0.5s ease, opacity 0.5s ease',
                   }}
                   loading="lazy"
@@ -275,7 +295,7 @@ export const Gallery: React.FC = () => {
           display: grid;
           grid-template-columns: repeat(12, 1fr);
           grid-auto-rows: 160px;
-          gap: 6px;
+          gap: 8px;
         }
         
         .blueprint-grid-bg {
@@ -292,15 +312,19 @@ export const Gallery: React.FC = () => {
           cursor: pointer;
         }
         
-        /* Grid mapping classes */
-        .g-card-1 { grid-column: span 5; grid-row: span 2; }
-        .g-card-2 { grid-column: span 3; grid-row: span 1; }
+        /* Staggered Grid Mapping Classes */
+        .g-card-1 { grid-column: span 4; grid-row: span 2; }
+        .g-card-2 { grid-column: span 4; grid-row: span 1; }
         .g-card-3 { grid-column: span 4; grid-row: span 2; }
-        .g-card-4 { grid-column: span 3; grid-row: span 1; }
+        .g-card-4 { grid-column: span 4; grid-row: span 1; }
         .g-card-5 { grid-column: span 4; grid-row: span 2; }
-        .g-card-6 { grid-column: span 3; grid-row: span 1; }
-        .g-card-7 { grid-column: span 5; grid-row: span 1; }
-        .g-card-8 { grid-column: span 3; grid-row: span 1; }
+        .g-card-6 { grid-column: span 4; grid-row: span 1; }
+        .g-card-7 { grid-column: span 4; grid-row: span 2; }
+        .g-card-8 { grid-column: span 4; grid-row: span 1; }
+        .g-card-9 { grid-column: span 4; grid-row: span 2; }
+        .g-card-10 { grid-column: span 4; grid-row: span 1; }
+        .g-card-11 { grid-column: span 4; grid-row: span 2; }
+        .g-card-12 { grid-column: span 4; grid-row: span 1; }
 
         /* Hover states */
         .blueprint-card:hover {
@@ -321,7 +345,7 @@ export const Gallery: React.FC = () => {
         }
         .photo-card:hover img {
           transform: scale(1.03);
-          opacity: 0.85 !important;
+          opacity: 0.9 !important;
         }
 
         @media (max-width: 900px) {
@@ -332,14 +356,11 @@ export const Gallery: React.FC = () => {
             grid-template-columns: repeat(6, 1fr) !important;
             grid-auto-rows: 150px !important;
           }
-          .g-card-1 { grid-column: span 3; grid-row: span 2; }
-          .g-card-2 { grid-column: span 3; grid-row: span 1; }
-          .g-card-3 { grid-column: span 3; grid-row: span 2; }
-          .g-card-4 { grid-column: span 3; grid-row: span 1; }
-          .g-card-5 { grid-column: span 3; grid-row: span 2; }
-          .g-card-6 { grid-column: span 3; grid-row: span 1; }
-          .g-card-7 { grid-column: span 6; grid-row: span 1; }
-          .g-card-8 { grid-column: span 3; grid-row: span 1; }
+          .g-card-1, .g-card-2, .g-card-3, .g-card-4, .g-card-5, .g-card-6, 
+          .g-card-7, .g-card-8, .g-card-9, .g-card-10, .g-card-11, .g-card-12 {
+            grid-column: span 3 !important;
+            grid-row: span 1 !important;
+          }
         }
 
         @media (max-width: 600px) {
@@ -348,16 +369,12 @@ export const Gallery: React.FC = () => {
             padding-right: 5vw !important;
           }
           .gallery-grid-container {
-            grid-template-columns: 1fr 1fr !important;
-            grid-auto-rows: 140px !important;
-            gap: 4px !important;
+            grid-template-columns: 1fr !important;
+            grid-auto-rows: 240px !important;
+            gap: 6px !important;
           }
-          .g-card-1, .g-card-2, .g-card-3, .g-card-4, .g-card-5, .g-card-6, .g-card-8 {
+          .gallery-item {
             grid-column: span 1 !important;
-            grid-row: span 1 !important;
-          }
-          .g-card-7 {
-            grid-column: span 2 !important;
             grid-row: span 1 !important;
           }
         }

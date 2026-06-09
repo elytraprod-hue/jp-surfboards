@@ -96,10 +96,8 @@ export const Header: React.FC = () => {
         </ul>
 
         {/* CTA */}
-        <a
-          href="https://wa.me/5548991663544?text=Olá,%20vim%20pelo%20site%20da%20JP%20Surf%20Boards%20e%20quero%20saber%20mais."
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={() => window.dispatchEvent(new CustomEvent('open-configurator'))}
           className="nav-cta-btn desktop-only-item text-mono"
           style={{
             fontSize: '0.58rem',
@@ -109,12 +107,12 @@ export const Header: React.FC = () => {
             border: '1px solid var(--accent)',
             color: 'var(--accent)',
             background: 'transparent',
-            textDecoration: 'none',
+            cursor: 'pointer',
             transition: 'all 0.15s ease',
           }}
         >
           Falar com a fábrica
-        </a>
+        </button>
 
         {/* Hamburger */}
         <button
@@ -198,10 +196,12 @@ export const Header: React.FC = () => {
           Galeria
         </a>
         <a
-          href="https://wa.me/5548991663544?text=Olá,%20vim%20pelo%20site%20da%20JP%20Surf%20Boards%20e%20quero%20saber%20mais."
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={closeMobileMenu}
+          href="#configurator"
+          onClick={(e) => {
+            e.preventDefault();
+            closeMobileMenu();
+            window.dispatchEvent(new CustomEvent('open-configurator'));
+          }}
           style={{
             ...mobileLinkStyle,
             color: 'var(--accent)',
