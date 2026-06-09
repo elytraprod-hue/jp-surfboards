@@ -536,7 +536,7 @@ Gostaria de alinhar as medidas, volume ideal e conversar sobre as especificaçõ
         .configurator-content {
           flex: 1;
           overflow-y: auto;
-          padding: 2rem 2.5rem;
+          padding: 2.5rem 3rem;
         }
 
         .configurator-step {
@@ -546,25 +546,25 @@ Gostaria de alinhar as medidas, volume ideal e conversar sobre as especificaçõ
         }
 
         .config-badge {
-          font-size: 0.5rem;
+          font-size: 0.55rem;
           letter-spacing: 0.25em;
           color: var(--accent);
           text-transform: uppercase;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.75rem;
         }
 
         .config-title {
-          font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-          line-height: 1;
+          font-size: clamp(1.8rem, 4vw, 2.5rem);
+          line-height: 1.1;
           letter-spacing: 0.02em;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.75rem;
         }
 
         .config-subtitle {
-          font-size: 0.8rem;
+          font-size: 0.95rem;
           color: var(--muted);
-          line-height: 1.6;
-          margin-bottom: 2rem;
+          line-height: 1.8;
+          margin-bottom: 2.5rem;
           max-width: 600px;
         }
 
@@ -572,7 +572,7 @@ Gostaria de alinhar as medidas, volume ideal e conversar sobre as especificaçõ
         .config-form-group {
           display: flex;
           flex-direction: column;
-          gap: 1.2rem;
+          gap: 1.5rem;
           max-width: 500px;
         }
         .config-input-wrapper {
@@ -582,9 +582,9 @@ Gostaria de alinhar as medidas, volume ideal e conversar sobre as especificaçõ
           width: 100%;
           background: var(--surface-2);
           border: 1px solid var(--border);
-          padding: 1rem 1.25rem;
+          padding: 1.25rem 1.5rem;
           color: var(--text);
-          font-size: 0.75rem;
+          font-size: 0.85rem;
           letter-spacing: 0.1em;
           outline: none;
           transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -603,12 +603,12 @@ Gostaria de alinhar as medidas, volume ideal e conversar sobre as especificaçõ
         .config-grid-options {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 1rem;
+          gap: 1.5rem;
         }
         .config-card-option {
           background: var(--surface-2);
           border: 1px solid var(--border);
-          padding: 1.5rem;
+          padding: 2rem;
           cursor: pointer;
           position: relative;
           transition: all 0.2s ease;
@@ -638,29 +638,29 @@ Gostaria de alinhar as medidas, volume ideal e conversar sobre as especificaçõ
           box-shadow: 0 0 6px var(--accent);
         }
         .opt-title {
-          font-size: 0.72rem;
+          font-size: 0.85rem;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           color: var(--text);
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.75rem;
           padding-right: 20px;
         }
         .opt-desc {
-          font-size: 0.7rem;
+          font-size: 0.8rem;
           color: var(--muted);
-          line-height: 1.5;
+          line-height: 1.7;
         }
 
         /* Boards Grid */
         .config-grid-boards {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 0.75rem;
+          gap: 1rem;
         }
         .config-board-card {
           background: var(--surface-2);
           border: 1px solid var(--border);
-          padding: 1rem;
+          padding: 1.25rem;
           cursor: pointer;
           display: flex;
           flex-direction: column;
@@ -704,14 +704,15 @@ Gostaria de alinhar as medidas, volume ideal e conversar sobre as especificaçõ
           text-transform: uppercase;
         }
         .board-name {
-          font-size: 0.78rem;
+          font-size: 0.9rem;
           text-transform: uppercase;
-          margin-bottom: 0.2rem;
+          margin-bottom: 0.3rem;
           letter-spacing: 0.05em;
         }
         .board-specs {
-          font-size: 0.58rem;
+          font-size: 0.7rem;
           color: var(--muted);
+          line-height: 1.5;
         }
 
         /* Summary Box */
