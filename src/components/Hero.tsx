@@ -150,6 +150,24 @@ export const Hero: React.FC = () => {
             {/* Fine Technical Line Overlay */}
             <div className="hero-tech-line-h" />
             <div className="hero-tech-line-v" />
+            
+
+            <span
+              className="text-mono"
+              style={{
+                position: 'absolute',
+                bottom: '-2rem',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                fontSize: '0.48rem',
+                letterSpacing: '0.3em',
+                textTransform: 'uppercase',
+                color: 'var(--muted)',
+                whiteSpace: 'nowrap',
+              }}
+            >
+              [ SHAPER INICIO ]
+            </span>
           </div>
         </div>
       </div>

@@ -460,11 +460,10 @@ Gostaria de alinhar as medidas, volume ideal e conversar sobre as especificaçõ
           backdrop-filter: blur(16px);
           z-index: 1000;
           display: flex;
-          align-items: flex-end;
+          align-items: center;
           justify-content: center;
           padding: 1.5rem;
           animation: fadeInOverlay 0.25s ease-out;
-          overflow-y: auto;
         }
 
         .configurator-modal {
@@ -479,7 +478,6 @@ Gostaria de alinhar as medidas, volume ideal e conversar sobre as especificaçõ
           position: relative;
           box-shadow: 0 30px 60px rgba(0, 0, 0, 0.85);
           animation: slideUpModal 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-          border-radius: 12px;
         }
 
         .configurator-close-btn {
@@ -832,17 +830,9 @@ Gostaria de alinhar as medidas, volume ideal e conversar sobre as especificaçõ
         }
 
         @media (max-width: 768px) {
-          .configurator-overlay {
-            align-items: flex-end;
-            padding: 0;
-            padding-top: 1rem;
-          }
           .configurator-modal {
-            height: 85vh;
-            max-height: 85vh;
-            width: 100%;
-            border-radius: 16px 16px 0 0;
-            max-width: 100%;
+            height: 100vh;
+            max-height: 100vh;
           }
           .configurator-progress-container {
             padding: 1rem 1.5rem 0.5rem;
