@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
         style={{
           flex: 1,
           display: 'grid',
-          gridTemplateColumns: '1fr 480px',
+          gridTemplateColumns: '1fr 1.1fr',
           alignItems: 'center',
           padding: '0 80px 0 52px',
           position: 'relative',
@@ -213,8 +213,9 @@ export const Hero: React.FC = () => {
       <style>{`
         .hero-image-frame-container {
           position: relative;
-          width: 620px;
-          height: 380px;
+          width: 100%;
+          max-width: 1000px;
+          aspect-ratio: 16 / 9;
           transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .hero-image-frame-container:hover {
