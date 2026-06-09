@@ -38,7 +38,7 @@ export const boards: Board[] = [
     tags: ["Médias a Grandes", "Intermediário", "Avançado", "Manobra Radical"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/performance.webp",
-    thumbImage: "/boards/thumbs/performance.webp",
+    thumbImage: "/boards/webp/performance-thumb.webp",
     whatsappMessage: "Olá, tenho interesse no modelo Performance (Double Viper) da JP Surf Boards.",
     bgWord: "PERF"
   },
@@ -59,7 +59,7 @@ export const boards: Board[] = [
     tags: ["Pequenas a Médias", "Intermediário", "Velocidade", "Flow"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/fish.webp",
-    thumbImage: "/boards/thumbs/fish.webp",
+    thumbImage: "/boards/webp/fish-thumb.webp",
     whatsappMessage: "Olá, tenho interesse no modelo Fish (Dark Rabbit) da JP Surf Boards.",
     bgWord: "FISH"
   },
@@ -80,7 +80,7 @@ export const boards: Board[] = [
     tags: ["Ondas Variadas", "Iniciante Avan.", "Progressão"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/funboard.webp",
-    thumbImage: "/boards/thumbs/funboard.webp",
+    thumbImage: "/boards/webp/funboard-thumb.webp",
     whatsappMessage: "Olá, tenho interesse no modelo Funboard (Wasabi) da JP Surf Boards.",
     bgWord: "FUN"
   },
@@ -101,7 +101,7 @@ export const boards: Board[] = [
     tags: ["Suaves a Médias", "Todos os Níveis", "Noseriding", "Estilo Clássico"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/longboard.webp",
-    thumbImage: "/boards/thumbs/longboard.webp",
+    thumbImage: "/boards/webp/longboard-thumb.webp",
     whatsappMessage: "Olá, tenho interesse no modelo Longboard (Skeletton Bird) da JP Surf Boards.",
     bgWord: "LONG"
   },
@@ -122,7 +122,7 @@ export const boards: Board[] = [
     tags: ["Grandes e Pesadas", "Avançado", "Potência / Controle"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/step-up.webp",
-    thumbImage: "/boards/thumbs/step-up.webp",
+    thumbImage: "/boards/webp/step-up-thumb.webp",
     whatsappMessage: "Olá, tenho interesse no modelo Step Up (Black Buffalo) da JP Surf Boards.",
     bgWord: "STEP"
   },
@@ -143,7 +143,7 @@ export const boards: Board[] = [
     tags: ["Grandes e Perigosas", "Expert", "Gun", "Tubo"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/custom.webp",
-    thumbImage: "/boards/thumbs/custom.webp",
+    thumbImage: "/boards/webp/custom-thumb.webp",
     whatsappMessage: "Olá, tenho interesse no modelo Heavy Water (Phantom Shark) da JP Surf Boards.",
     bgWord: "GUN"
   },
@@ -164,7 +164,7 @@ export const boards: Board[] = [
     tags: ["Pequenas a Médias", "Intermediário", "Avançado", "Daily Driver"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/bus-driver.webp",
-    thumbImage: "/boards/thumbs/bus-driver.webp",
+    thumbImage: "/boards/webp/bus-driver-thumb.webp",
     whatsappMessage: "Olá, tenho interesse no modelo Bus Driver da JP Surf Boards.",
     bgWord: "BUS"
   }

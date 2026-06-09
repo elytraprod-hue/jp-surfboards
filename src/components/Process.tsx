@@ -8,28 +8,28 @@ interface ProcessStep {
 
 const steps: ProcessStep[] = [
   {
-    label: "01 / BLANK",
-    title: "Seleção",
+    label: "BLANK",
+    title: "Seleção do Bloco",
     description: "Escolha do bloco virgem (PU ou EPS) com densidade e rocker ideais para o seu peso e tipo de onda."
   },
   {
-    label: "02 / SHAPE",
-    title: "Shaping",
+    label: "SHAPE",
+    title: "Shaping Artesanal",
     description: "Cada detalhe esculpido à mão pelo shaper: o outline, concaves, caimento de bordas e distribuição de flutuação."
   },
   {
-    label: "03 / LAMINAÇÃO",
-    title: "Glassing",
+    label: "LAMINAÇÃO",
+    title: "Glassing Técnico",
     description: "Laminação em fibra de vidro e resina de alta qualidade. Camadas calculadas para peso, flexibilidade e resistência."
   },
   {
-    label: "04 / ACABAMENTO",
-    title: "Finish",
-    description: "Lixamento técnico de precisão, instalação dos copos de quilha (FCS II ou Futures), polimento e arte personalizada."
+    label: "ACABAMENTO",
+    title: "Lixamento e Setup",
+    description: "Lixamento de precisão, instalação dos copos de quilha (FCS II ou Futures), polimento e arte personalizada."
   },
   {
-    label: "05 / ENTREGA",
-    title: "Pronta",
+    label: "MAR",
+    title: "Pronta para o Mar",
     description: "Sua prancha finalizada, embalada com proteção e pronta para fazer o que foi shapada para fazer: entrar no mar."
   }
 ];

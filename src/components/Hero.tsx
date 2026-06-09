@@ -55,17 +55,17 @@ export const Hero: React.FC = () => {
         style={{
           flex: 1,
           display: 'grid',
-          gridTemplateColumns: '1fr 420px',
+          gridTemplateColumns: '1fr 480px',
           alignItems: 'center',
           padding: '0 80px 0 52px',
           position: 'relative',
           zIndex: 2,
-          gap: 0,
+          gap: '2rem',
         }}
         className="hero-main-container"
       >
         {/* Left Side Info */}
-        <div style={{ paddingRight: '4vw' }} className="hero-left-side">
+        <div style={{ paddingRight: '2vw' }} className="hero-left-side">
           <div
             className="text-mono"
             style={{
@@ -106,6 +106,17 @@ export const Hero: React.FC = () => {
             BOARDS
           </h1>
 
+          {/* Mobile-only Hero Image (displays below title on mobile) */}
+          <div className="mobile-hero-img-box">
+            <img
+              src="/hero/inicio.webp"
+              alt="JP Surf Boards"
+              className="mobile-hero-img"
+              loading="eager"
+            />
+            <div className="mobile-hero-img-border" />
+          </div>
+
           <div
             style={{
               marginTop: '2.5rem',
@@ -114,13 +125,14 @@ export const Hero: React.FC = () => {
               gap: '1.25rem',
               flexWrap: 'wrap',
             }}
+            className="hero-taglines"
           >
             <span style={taglineItemStyle}>Handcrafted</span>
             <span style={taglineItemStyle}>Performance</span>
             <span style={taglineItemStyle}>Custom Shapes</span>
           </div>
 
-          <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }} className="hero-ctas">
             <a href="#catalog" className="btn-premium">
               Catálogo técnico ➔
             </a>
@@ -130,7 +142,7 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Side Blueprint */}
+        {/* Right Side Image Showcase (Desktop Only) */}
         <div
           style={{
             position: 'relative',
@@ -139,96 +151,26 @@ export const Hero: React.FC = () => {
             alignItems: 'center',
             justifyContent: 'center',
             borderLeft: '1px solid var(--border)',
+            paddingLeft: '3rem',
           }}
           className="hero-right-side"
         >
-          <div className="hero-blueprint-container">
-            <svg
-              style={{ width: '100%', height: '100%' }}
-              viewBox="0 0 220 540"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Outer Glow */}
-              <path
-                d="M110 14C152 14 185 60 188 150C191 218 189 318 181 396C170 450 152 508 110 520C68 508 50 450 39 396C31 318 29 218 32 150C35 60 68 14 110 14Z"
-                stroke="rgba(179, 18, 23, 0.08)"
-                strokeWidth="12"
-                fill="none"
+          <div className="hero-image-frame-container">
+            <div className="hero-image-frame">
+              <img
+                src="/hero/inicio.webp"
+                alt="JP Surf Boards Workshop Design"
+                className="hero-desktop-img"
+                loading="eager"
               />
-              {/* Main Board Outline */}
-              <path
-                d="M110 14C152 14 185 60 188 150C191 218 189 318 181 396C170 450 152 508 110 520C68 508 50 450 39 396C31 318 29 218 32 150C35 60 68 14 110 14Z"
-                stroke="rgba(245, 245, 245, 0.12)"
-                strokeWidth="1.2"
-                fill="rgba(245, 245, 245, 0.01)"
-              />
-              {/* Center Stringer */}
-              <line
-                x1="110"
-                y1="14"
-                x2="110"
-                y2="520"
-                stroke="rgba(179, 18, 23, 0.5)"
-                strokeWidth="1"
-                strokeDasharray="6 9"
-              />
-              {/* Rail/Foam curves */}
-              <path d="M52,190 Q88,181 110,179 Q132,181 168,190" stroke="rgba(245,245,245,0.06)" strokeWidth="1" fill="none" />
-              <path d="M34,290 Q72,281 110,279 Q148,281 186,290" stroke="rgba(245,245,245,0.06)" strokeWidth="1" fill="none" />
-              <path d="M38,380 Q74,371 110,369 Q146,371 182,380" stroke="rgba(245,245,245,0.06)" strokeWidth="1" fill="none" />
-              {/* Fins */}
-              <rect x="104" y="456" width="5" height="42" rx="1" stroke="rgba(179,18,23,0.7)" strokeWidth="1" fill="none" />
-              <rect
-                x="82"
-                y="467"
-                width="4.5"
-                height="30"
-                rx="1"
-                stroke="rgba(179,18,23,0.4)"
-                strokeWidth="1"
-                fill="none"
-                transform="rotate(-11 84 482)"
-              />
-              <rect
-                x="136"
-                y="467"
-                width="4.5"
-                height="30"
-                rx="1"
-                stroke="rgba(179,18,23,0.4)"
-                strokeWidth="1"
-                fill="none"
-                transform="rotate(11 138 482)"
-              />
-              {/* Brand stamp on stringer */}
-              <text
-                x="110"
-                y="110"
-                textAnchor="middle"
-                className="text-anton"
-                fontSize="24"
-                fill="rgba(245, 245, 245, 0.05)"
-                letterSpacing="5"
-              >
-                JP
-              </text>
-              {/* Dimension grids */}
-              <line x1="25" y1="150" x2="25" y2="396" stroke="rgba(179, 18, 23, 0.2)" strokeWidth="0.8" />
-              <line x1="22" y1="150" x2="28" y2="150" stroke="rgba(179, 18, 23, 0.2)" strokeWidth="0.8" />
-              <line x1="22" y1="396" x2="28" y2="396" stroke="rgba(179, 18, 23, 0.2)" strokeWidth="0.8" />
-              <text
-                x="18"
-                y="275"
-                textAnchor="middle"
-                className="text-mono"
-                fontSize="7"
-                fill="rgba(179, 18, 23, 0.4)"
-                transform="rotate(-90,18,275)"
-              >
-                DECK LENGTH
-              </text>
-            </svg>
+              <div className="hero-img-overlay-lines" />
+            </div>
+            
+            {/* Fine Technical Line Overlay */}
+            <div className="hero-tech-line-h" />
+            <div className="hero-tech-line-v" />
+            
+            {/* Specs detail boxes overlay */}
             <div
               className="text-mono"
               style={{
@@ -239,6 +181,7 @@ export const Hero: React.FC = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '0.75rem',
+                zIndex: 5,
               }}
             >
               <div style={specsOverlayStyle}>Shape Manual</div>
@@ -259,7 +202,7 @@ export const Hero: React.FC = () => {
                 whiteSpace: 'nowrap',
               }}
             >
-              [ SHAPER BLUEPRINT ]
+              [ SHAPER INICIO ]
             </span>
           </div>
         </div>
@@ -315,19 +258,100 @@ export const Hero: React.FC = () => {
           <a href="#custom" style={footLinkStyle}>
             Heavy Water
           </a>
+          <a href="#bus-driver" style={footLinkStyle}>
+            Bus Driver
+          </a>
         </div>
       </div>
 
       <style>{`
-        .hero-blueprint-container {
+        .hero-image-frame-container {
           position: relative;
-          width: 200px;
-          height: 520px;
+          width: 320px;
+          height: 480px;
           transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .hero-blueprint-container:hover {
-          transform: rotate(-3deg) scale(1.03);
+        .hero-image-frame-container:hover {
+          transform: rotate(-2deg) scale(1.02);
         }
+        .hero-image-frame {
+          width: 100%;
+          height: 100%;
+          border: 1px solid var(--border);
+          position: relative;
+          overflow: hidden;
+          background: var(--surface-2);
+        }
+        .hero-desktop-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          opacity: 0.75;
+          transition: opacity 0.3s ease;
+        }
+        .hero-image-frame-container:hover .hero-desktop-img {
+          opacity: 0.9;
+        }
+        .hero-img-overlay-lines {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background-image: repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 14px,
+            rgba(179, 18, 23, 0.04) 14px,
+            rgba(179, 18, 23, 0.04) 15px
+          );
+        }
+        .hero-tech-line-h {
+          position: absolute;
+          left: -20px;
+          right: -20px;
+          top: 30px;
+          height: 1px;
+          background: rgba(179, 18, 23, 0.2);
+          pointer-events: none;
+          z-index: 4;
+        }
+        .hero-tech-line-v {
+          position: absolute;
+          top: -20px;
+          bottom: -20px;
+          left: 30px;
+          width: 1px;
+          background: rgba(179, 18, 23, 0.2);
+          pointer-events: none;
+          z-index: 4;
+        }
+        
+        /* Mobile Specific Style */
+        .mobile-hero-img-box {
+          display: none;
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16/10;
+          margin: 1.5rem 0;
+          overflow: hidden;
+        }
+        .mobile-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          border: 1px solid var(--border);
+          opacity: 0.8;
+        }
+        .mobile-hero-img-border {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          border: 1px solid var(--accent);
+          opacity: 0.3;
+          margin: 4px;
+        }
+
         @media (max-width: 1024px) {
           .hero-main-container {
             grid-template-columns: 1fr !important;
@@ -339,6 +363,9 @@ export const Hero: React.FC = () => {
           }
           .hero-foot-links {
             display: none !important;
+          }
+          .mobile-hero-img-box {
+            display: block !important;
           }
         }
         @media (max-width: 900px) {
@@ -352,9 +379,21 @@ export const Hero: React.FC = () => {
         @media (max-width: 600px) {
           .hero-main-container {
             padding-left: 5vw !important;
+            padding-right: 5vw !important;
           }
           .hero-foot-bar {
             padding-left: 5vw !important;
+          }
+          .hero-taglines {
+            margin-top: 1.5rem !important;
+          }
+          .hero-ctas {
+            margin-top: 1.5rem !important;
+            width: 100%;
+          }
+          .hero-ctas a {
+            width: 100%;
+            justify-content: center;
           }
         }
         .hero-foot-links a:hover {

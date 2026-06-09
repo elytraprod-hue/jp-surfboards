@@ -77,14 +77,14 @@ export const Catalog: React.FC = () => {
                 style={{
                   position: 'relative',
                   overflow: 'hidden',
-                  background: 'var(--surface)',
+                  background: 'var(--bg)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   borderRight: isAlt ? 'none' : '1px solid var(--border)',
                   borderLeft: isAlt ? '1px solid var(--border)' : 'none',
                   order: isAlt ? 2 : 1,
-                  padding: '60px 0',
+                  padding: '60px 4vw',
                 }}
               >
                 {/* Tech drawing overlays (grid texture) */}
@@ -93,7 +93,7 @@ export const Catalog: React.FC = () => {
                     position: 'absolute',
                     inset: 0,
                     pointerEvents: 'none',
-                    backgroundImage: 'repeating-linear-gradient(135deg, transparent, transparent 24px, rgba(255, 255, 255, 0.005) 24px, rgba(255, 255, 255, 0.005) 25px)',
+                    backgroundImage: 'repeating-linear-gradient(135deg, transparent, transparent 24px, rgba(255, 255, 255, 0.003) 24px, rgba(255, 255, 255, 0.003) 25px)',
                   }}
                 />
 
@@ -128,7 +128,7 @@ export const Catalog: React.FC = () => {
                     right: '2.5rem',
                     fontSize: 'clamp(3.5rem, 6vw, 5.5rem)',
                     color: 'var(--accent)',
-                    opacity: 0.045,
+                    opacity: 0.035,
                     letterSpacing: '0.02em',
                     pointerEvents: 'none',
                     lineHeight: 1,
@@ -138,13 +138,14 @@ export const Catalog: React.FC = () => {
                   {board.volume.replace(/\s+/g, '')}
                 </div>
 
-                {/* Outer frame coordinate details */}
+                {/* Outer frame coordinate details (Desktop only) */}
                 <div
-                  className="text-mono"
+                  className="text-mono desktop-only-item"
                   style={{
                     position: 'absolute',
                     bottom: '2rem',
-                    left: '2rem',
+                    left: isAlt ? 'auto' : '2rem',
+                    right: isAlt ? '2rem' : 'auto',
                     zIndex: 3,
                     fontSize: '0.52rem',
                     letterSpacing: '0.2em',
@@ -153,45 +154,113 @@ export const Catalog: React.FC = () => {
                     lineHeight: 1.6,
                   }}
                 >
-                  <span style={{ display: 'block' }}>SIZE: {board.sizes}</span>
-                  <span style={{ display: 'block' }}>FINS: {board.fins}</span>
+                  <span style={{ display: 'block' }}>SETUP: {board.fins}</span>
                   <span style={{ display: 'block' }}>COORDS: {board.coordinates}</span>
                 </div>
 
-                {/* Main Surfboard Image */}
-                <div className="board-img-wrapper" style={{ width: '48%', maxWidth: '280px', position: 'relative', zIndex: 2 }}>
-                  <img
-                    src={board.mainImage}
-                    alt={`${board.category} — ${board.name}`}
+                {/* Premium Catalog Box (Off-White high contrast card) */}
+                <div
+                  className="catalog-card"
+                  style={{
+                    width: '100%',
+                    maxWidth: '360px',
+                    aspectRatio: '2/3',
+                    background: '#FFFFFF',
+                    border: '1px solid var(--border)',
+                    position: 'relative',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '2.5rem 1.5rem',
+                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6)',
+                    transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease',
+                  }}
+                >
+                  {/* Card Corner accents (Technical red marks) */}
+                  <div style={{ position: 'absolute', top: '8px', left: '8px', width: '8px', height: '8px', borderTop: '1.5px solid var(--accent)', borderLeft: '1.5px solid var(--accent)' }} />
+                  <div style={{ position: 'absolute', top: '8px', right: '8px', width: '8px', height: '8px', borderTop: '1.5px solid var(--accent)', borderRight: '1.5px solid var(--accent)' }} />
+                  <div style={{ position: 'absolute', bottom: '8px', left: '8px', width: '8px', height: '8px', borderBottom: '1.5px solid var(--accent)', borderLeft: '1.5px solid var(--accent)' }} />
+                  <div style={{ position: 'absolute', bottom: '8px', right: '8px', width: '8px', height: '8px', borderBottom: '1.5px solid var(--accent)', borderRight: '1.5px solid var(--accent)' }} />
+
+                  {/* Shaper metadata stamp inside the card */}
+                  <div
+                    className="text-mono"
+                    style={{
+                      position: 'absolute',
+                      top: '12px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      fontSize: '0.45rem',
+                      letterSpacing: '0.2em',
+                      color: 'rgba(5, 5, 5, 0.4)',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    JP SURFBOARDS // {board.category.toUpperCase()}
+                  </div>
+
+                  {/* Main Surfboard Image */}
+                  <div
+                    className="board-img-wrapper"
                     style={{
                       width: '100%',
-                      height: 'auto',
-                      display: 'block',
-                      filter: 'drop-shadow(0 15px 35px rgba(0,0,0,0.85))',
-                      transition: 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+                      height: '100%',
+                      position: 'relative',
+                      zIndex: 2,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      padding: '10px',
                     }}
-                    onError={(e) => {
-                      // fallback to a clean SVG silhouette if image fails to load
-                      const target = e.currentTarget;
-                      target.style.display = 'none';
-                      const svgFallback = target.nextElementSibling as HTMLElement;
-                      if (svgFallback) svgFallback.style.display = 'block';
-                    }}
-                    loading="lazy"
-                  />
-                  
-                  {/* Blueprint fallback SVG */}
-                  <svg
-                    style={{ display: 'none', width: '100%', opacity: 0.12 }}
-                    viewBox="0 0 200 460"
-                    fill="none"
-                    stroke="var(--text)"
-                    strokeWidth="1.5"
                   >
-                    <path d="M100 10C135 10 162 48 165 125C168 188 165 290 158 355C148 408 130 450 100 460C70 450 52 408 42 355C35 290 32 188 35 125C38 48 65 10 100 10Z" />
-                    <line x1="100" y1="10" x2="100" y2="460" stroke="var(--accent)" strokeDasharray="5 8" />
-                    <path d="M40,280 Q70,272 100,270 Q130,272 160,280" stroke="rgba(255,255,255,0.05)" strokeWidth="1" fill="none" />
-                  </svg>
+                    <img
+                      src={board.mainImage}
+                      alt={`${board.category} — ${board.name}`}
+                      style={{
+                        maxWidth: '100%',
+                        maxHeight: '100%',
+                        objectFit: 'contain',
+                        display: 'block',
+                        transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+                      }}
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        target.style.display = 'none';
+                        const svgFallback = target.nextElementSibling as HTMLElement;
+                        if (svgFallback) svgFallback.style.display = 'block';
+                      }}
+                      loading="lazy"
+                    />
+                    
+                    {/* Fallback silhouette if image fails */}
+                    <svg
+                      style={{ display: 'none', width: '60%', opacity: 0.12 }}
+                      viewBox="0 0 200 460"
+                      fill="none"
+                      stroke="#050505"
+                      strokeWidth="1.5"
+                    >
+                      <path d="M100 10C135 10 162 48 165 125C168 188 165 290 158 355C148 408 130 450 100 460C70 450 52 408 42 355C35 290 32 188 35 125C38 48 65 10 100 10Z" />
+                      <line x1="100" y1="10" x2="100" y2="460" stroke="var(--accent)" strokeDasharray="5 8" />
+                    </svg>
+                  </div>
+
+                  {/* Bottom details inside card */}
+                  <div
+                    className="text-mono"
+                    style={{
+                      position: 'absolute',
+                      bottom: '12px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      fontSize: '0.45rem',
+                      letterSpacing: '0.15em',
+                      color: 'rgba(5, 5, 5, 0.4)',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {board.sizes} // {board.volume}
+                  </div>
                 </div>
               </div>
 
@@ -342,8 +411,13 @@ export const Catalog: React.FC = () => {
       </div>
 
       <style>{`
-        .board-entry:hover .board-img-wrapper img {
-          transform: rotate(-3deg) scale(1.04);
+        .catalog-card:hover {
+          transform: translateY(-8px) scale(1.02) !important;
+          border-color: var(--accent) !important;
+          box-shadow: 0 35px 70px rgba(0, 0, 0, 0.75) !important;
+        }
+        .catalog-card:hover img {
+          transform: scale(1.04) rotate(-1.5deg);
         }
         .spec-row-item {
           display: grid;
@@ -379,21 +453,36 @@ export const Catalog: React.FC = () => {
           }
           .board-img-frame {
             order: -1 !important;
-            min-height: 380px !important;
+            min-height: 420px !important;
             border: none !important;
             border-bottom: 1px solid var(--border) !important;
+            padding: 40px 5vw !important;
+          }
+          .catalog-card {
+            max-width: 280px !important;
           }
           .board-info-side {
             order: 1 !important;
             padding: 3rem 36px !important;
           }
-          .board-entry:hover .board-img-wrapper img {
+          .catalog-card:hover {
+            transform: none !important;
+          }
+          .catalog-card:hover img {
             transform: none !important;
           }
         }
         @media (max-width: 600px) {
           .board-info-side {
             padding: 2.5rem 5vw !important;
+          }
+          .catalog-card {
+            max-width: 250px !important;
+          }
+        }
+        @media (max-width: 900px) {
+          .desktop-only-item {
+            display: none !important;
           }
         }
       `}</style>

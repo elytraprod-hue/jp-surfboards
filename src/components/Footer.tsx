@@ -116,6 +116,11 @@ export const Footer: React.FC = () => {
                 Heavy Water
               </a>
             </li>
+            <li>
+              <a href="#bus-driver" style={footerLinkStyle}>
+                Bus Driver
+              </a>
+            </li>
           </ul>
         </div>
 

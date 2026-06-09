@@ -28,7 +28,7 @@ export const Gallery: React.FC = () => {
     {
       title: "A Fábrica",
       subtitle: "Florianópolis, SC",
-      imgSrc: "/boards/webp/factory-about.webp",
+      imgSrc: "/gallery/factory-about.webp",
     },
     {
       title: "Dark Rabbit Profile",

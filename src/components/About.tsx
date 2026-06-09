@@ -58,8 +58,8 @@ export const About: React.FC = () => {
               color: 'var(--text)',
             }}
           >
-            DO BLANK<br />
-            <span style={{ color: 'var(--accent)' }}>AO MAR.</span>
+            ALMA<br />
+            <span style={{ color: 'var(--accent)' }}>ARTESANAL.</span>
           </h2>
           
           <p
@@ -148,7 +148,7 @@ export const About: React.FC = () => {
           {/* Premium Framed Image */}
           <div className="about-photo-wrapper">
             <img
-              src="/boards/webp/factory-about.webp"
+              src="/gallery/factory-about.webp"
               alt="JP Surf Boards Factory Workshop"
               style={{
                 width: '100%',
