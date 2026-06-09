@@ -12,6 +12,7 @@ export interface Board {
   fins: string;
   tail: string;
   rocker: string;
+  price: number;
   tags: string[];
   coordinates: string;
   mainImage: string;
@@ -35,6 +36,7 @@ export const boards: Board[] = [
     fins: "Tri-fin (FCS II)",
     tail: "Swallow / Crescent",
     rocker: "Acelerado",
+    price: 2490,
     tags: ["Médias a Grandes", "Intermediário", "Avançado", "Manobra Radical"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/performance.webp",
@@ -56,6 +58,7 @@ export const boards: Board[] = [
     fins: "Twin / Quad",
     tail: "Fish / Swallow",
     rocker: "Flat / Baixo",
+    price: 2490,
     tags: ["Pequenas a Médias", "Intermediário", "Velocidade", "Flow"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/fish.webp",
@@ -77,6 +80,7 @@ export const boards: Board[] = [
     fins: "Tri-fin (FCS II)",
     tail: "Round / Squash",
     rocker: "Suave / Médio",
+    price: 2490,
     tags: ["Ondas Variadas", "Iniciante Avan.", "Progressão"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/funboard.webp",
@@ -98,6 +102,7 @@ export const boards: Board[] = [
     fins: "Single Fin + Side Bites",
     tail: "Round / Pintail",
     rocker: "Clássico / Suave",
+    price: 2490,
     tags: ["Suaves a Médias", "Todos os Níveis", "Noseriding", "Estilo Clássico"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/longboard.webp",
@@ -119,6 +124,7 @@ export const boards: Board[] = [
     fins: "Tri-fin / Quad (FCS II)",
     tail: "Pin / Round Pin",
     rocker: "Acentuado",
+    price: 2490,
     tags: ["Grandes e Pesadas", "Avançado", "Potência / Controle"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/step-up.webp",
@@ -140,6 +146,7 @@ export const boards: Board[] = [
     fins: "Tri-fin (FCS II / Futures)",
     tail: "Pin Tail",
     rocker: "Extremo",
+    price: 2490,
     tags: ["Grandes e Perigosas", "Expert", "Gun", "Tubo"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/custom.webp",
@@ -161,6 +168,7 @@ export const boards: Board[] = [
     fins: "Tri-fin (FCS II / Futures)",
     tail: "Squash / Round",
     rocker: "Moderado",
+    price: 2490,
     tags: ["Pequenas a Médias", "Intermediário", "Avançado", "Daily Driver"],
     coordinates: "27°14'S / 48°33'W",
     mainImage: "/boards/webp/bus-driver.webp",

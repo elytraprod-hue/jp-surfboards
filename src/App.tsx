@@ -3,8 +3,10 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Catalog } from './components/Catalog';
+import { ShaperBio } from './components/ShaperBio';
 import { Process } from './components/Process';
 import { Gallery } from './components/Gallery';
+import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { Configurator } from './components/Configurator';
 import { debounce } from './utils/debounce';
@@ -76,8 +78,10 @@ const App: React.FC = () => {
         <Hero />
         <About />
         <Catalog />
+        <ShaperBio />
         <Process />
         <Gallery />
+        <FAQ />
       </main>
 
       <Footer />
@@ -89,7 +93,7 @@ const App: React.FC = () => {
       <div className="float-widgets-container">
         {/* Instagram Widget */}
         <a
-          href="https://www.instagram.com/jpsurfboards/"
+          href="https://www.instagram.com/jp.surfboards?igsh=OHBrZHE5NDk1MXg0"
           target="_blank"
           rel="noopener noreferrer"
           className="float-action-btn float-ig-btn"

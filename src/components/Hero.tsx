@@ -114,6 +114,20 @@ export const Hero: React.FC = () => {
             <span style={taglineItemStyle}>Custom Shapes</span>
           </div>
 
+          {/* Slogan */}
+          <div
+            style={{
+              marginTop: '2rem',
+              fontSize: '0.9rem',
+              fontStyle: 'italic',
+              letterSpacing: '0.05em',
+              color: 'var(--accent)',
+            }}
+            className="text-mono"
+          >
+            "It comes in waves"
+          </div>
+
           <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }} className="hero-ctas">
             <a href="#catalog" className="btn-premium">
               Catálogo técnico ➔

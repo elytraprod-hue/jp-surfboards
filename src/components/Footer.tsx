@@ -47,6 +47,18 @@ export const Footer: React.FC = () => {
           >
             Pranchas de surf artesanais de alta performance shapadas à mão em Florianópolis, SC. Foco total em hidrodinâmica e controle.
           </p>
+          <p
+            className="text-mono"
+            style={{
+              fontSize: '0.7rem',
+              letterSpacing: '0.1em',
+              color: 'var(--accent)',
+              fontStyle: 'italic',
+              marginBottom: '1.25rem',
+            }}
+          >
+            "It comes in waves"
+          </p>
           <button
             onClick={() => window.dispatchEvent(new CustomEvent('open-configurator'))}
             className="text-mono"
@@ -188,7 +200,7 @@ export const Footer: React.FC = () => {
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/jpsurfboards/" target="_blank" rel="noopener noreferrer" style={footerLinkStyle}>
+              <a href="https://www.instagram.com/jp.surfboards?igsh=OHBrZHE5NDk1MXg0" target="_blank" rel="noopener noreferrer" style={footerLinkStyle}>
                 Instagram
               </a>
             </li>

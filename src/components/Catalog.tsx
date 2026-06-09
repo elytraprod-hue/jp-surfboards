@@ -372,6 +372,10 @@ export const Catalog: React.FC = () => {
                     <span className="spec-key text-mono">Volume</span>
                     <span className="spec-val text-mono">{board.volume}</span>
                   </div>
+                  <div className="spec-row-item highlight-row">
+                    <span className="spec-key text-mono">A partir de</span>
+                    <span className="spec-val text-mono">R$ {board.price.toLocaleString('pt-BR')}</span>
+                  </div>
                   <div className="spec-row-item">
                     <span className="spec-key text-mono">Quilhas Setup</span>
                     <span className="spec-val text-mono">{board.fins}</span>
