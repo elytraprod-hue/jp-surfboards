@@ -6,6 +6,7 @@ import { Catalog } from './components/Catalog';
 import { ShaperBio } from './components/ShaperBio';
 import { Process } from './components/Process';
 import { Gallery } from './components/Gallery';
+import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { Configurator } from './components/Configurator';
@@ -81,6 +82,7 @@ const App: React.FC = () => {
         <ShaperBio />
         <Process />
         <Gallery />
+        <Testimonials />
         <FAQ />
       </main>
 
