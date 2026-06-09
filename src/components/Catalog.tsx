@@ -218,7 +218,7 @@ export const Catalog: React.FC = () => {
                     marginBottom: '1rem',
                   }}
                 >
-                  {board.number} / 06
+                  {board.number} / {String(boards.length).padStart(2, '0')}
                 </div>
 
                 <div

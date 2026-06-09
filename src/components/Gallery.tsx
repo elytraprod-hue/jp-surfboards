@@ -90,6 +90,18 @@ export const Gallery: React.FC = () => {
           <line x1="50" y1="5" x2="50" y2="240" stroke="rgba(245,245,245,0.15)" strokeDasharray="3 5" />
         </svg>
       )
+    },
+    {
+      title: "Bus Driver Outline",
+      subtitle: "Daily Driver / 07",
+      isBlueprint: true,
+      slug: "bus-driver",
+      blueprintSvg: (
+        <svg viewBox="0 0 100 240" fill="none" stroke="var(--accent)" strokeWidth="0.8" style={{ width: '60%', opacity: 0.25 }}>
+          <path d="M50 5C70 5 86 25 88 70C90 105 88 165 82 200C74 225 64 235 50 240C36 235 26 225 18 200C12 165 10 105 12 70C14 25 30 5 50 5Z" />
+          <line x1="50" y1="5" x2="50" y2="240" stroke="rgba(245,245,245,0.15)" strokeDasharray="3 5" />
+        </svg>
+      )
     }
   ];
 
@@ -288,6 +300,7 @@ export const Gallery: React.FC = () => {
         .g-card-5 { grid-column: span 4; grid-row: span 2; }
         .g-card-6 { grid-column: span 3; grid-row: span 1; }
         .g-card-7 { grid-column: span 5; grid-row: span 1; }
+        .g-card-8 { grid-column: span 3; grid-row: span 1; }
 
         /* Hover states */
         .blueprint-card:hover {
@@ -326,6 +339,7 @@ export const Gallery: React.FC = () => {
           .g-card-5 { grid-column: span 3; grid-row: span 2; }
           .g-card-6 { grid-column: span 3; grid-row: span 1; }
           .g-card-7 { grid-column: span 6; grid-row: span 1; }
+          .g-card-8 { grid-column: span 3; grid-row: span 1; }
         }
 
         @media (max-width: 600px) {
@@ -338,7 +352,7 @@ export const Gallery: React.FC = () => {
             grid-auto-rows: 140px !important;
             gap: 4px !important;
           }
-          .g-card-1, .g-card-2, .g-card-3, .g-card-4, .g-card-5, .g-card-6 {
+          .g-card-1, .g-card-2, .g-card-3, .g-card-4, .g-card-5, .g-card-6, .g-card-8 {
             grid-column: span 1 !important;
             grid-row: span 1 !important;
           }

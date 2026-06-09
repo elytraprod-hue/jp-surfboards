@@ -146,5 +146,26 @@ export const boards: Board[] = [
     thumbImage: "/boards/thumbs/custom.webp",
     whatsappMessage: "Olá, tenho interesse no modelo Heavy Water (Phantom Shark) da JP Surf Boards.",
     bgWord: "GUN"
+  },
+  {
+    id: "bus-driver",
+    number: "07",
+    name: "Bus Driver",
+    category: "Daily Driver",
+    slug: "bus-driver",
+    description: "Uma prancha de performance projetada para o dia a dia. Excelente velocidade, resposta rápida e facilidade nas manobras em ondas de tamanho variado. Possui outline equilibrado e rocker moderado para excelente drive e controle.",
+    waveType: "Pequenas a Médias",
+    level: "Intermediário / Avançado",
+    sizes: "5'8\" — 6'2\"",
+    volume: "27 — 35 L",
+    fins: "Tri-fin (FCS II / Futures)",
+    tail: "Squash / Round",
+    rocker: "Moderado",
+    tags: ["Pequenas a Médias", "Intermediário", "Avançado", "Daily Driver"],
+    coordinates: "27°14'S / 48°33'W",
+    mainImage: "/boards/webp/bus-driver.webp",
+    thumbImage: "/boards/thumbs/bus-driver.webp",
+    whatsappMessage: "Olá, tenho interesse no modelo Bus Driver da JP Surf Boards.",
+    bgWord: "BUS"
   }
 ];
