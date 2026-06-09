@@ -213,6 +213,7 @@ export const Catalog: React.FC = () => {
                     <img
                       src={board.mainImage}
                       alt={`${board.category} — ${board.name}`}
+                      loading="lazy"
                       style={{
                         maxWidth: '100%',
                         maxHeight: '100%',
@@ -226,7 +227,6 @@ export const Catalog: React.FC = () => {
                         const svgFallback = target.nextElementSibling as HTMLElement;
                         if (svgFallback) svgFallback.style.display = 'block';
                       }}
-                      loading="lazy"
                     />
                     
                     {/* Fallback silhouette if image fails */}
@@ -414,12 +414,16 @@ export const Catalog: React.FC = () => {
 
       <style>{`
         .catalog-card:hover {
-          transform: translateY(-8px) scale(1.02) !important;
+          transform: translateY(-8px) !important;
           border-color: var(--accent) !important;
           box-shadow: 0 35px 70px rgba(0, 0, 0, 0.75) !important;
         }
         .catalog-card:hover img {
-          transform: scale(1.04) rotate(-1.5deg);
+          transform: scale(1.02);
+        }
+        .catalog-card {
+          will-change: transform, box-shadow;
+          contain: layout style paint;
         }
         .spec-row-item {
           display: grid;

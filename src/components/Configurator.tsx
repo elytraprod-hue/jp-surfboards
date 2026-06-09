@@ -766,11 +766,15 @@ Gostaria de alinhar as medidas, volume ideal e conversar sobre as especificaçõ
           align-items: center;
           justify-content: center;
           padding: 6px;
+          aspect-ratio: 2/3;
+          overflow: hidden;
         }
         .summary-board-img img {
           max-width: 100%;
           max-height: 100%;
           object-fit: contain;
+          width: 100%;
+          height: 100%;
         }
         .summary-board-info {
           flex: 1;

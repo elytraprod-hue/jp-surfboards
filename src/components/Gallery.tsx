@@ -136,6 +136,7 @@ export const Gallery: React.FC = () => {
           background: var(--surface-2);
           transition: all 0.3s ease;
           border: 1px solid rgba(255, 255, 255, 0.08);
+          will-change: border-color, box-shadow;
         }
         
         .photo-card:hover {
